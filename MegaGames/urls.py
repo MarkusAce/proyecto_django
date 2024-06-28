@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('cliente.urls')),
     path('', include('pagina.urls')),
-    path('', include('ventas.urls'))
+    path('', include('ventas.urls')),
+    path('', include('autenticar.urls')),
 ]
 
 if settings.DEBUG:

@@ -245,3 +245,93 @@ html, body{/*Fondo de pantalla*/
     }
 }
 
+
+.ingresar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-flow: column;
+}
+
+.posicion{
+    position: relative;
+    margin: 12px 0;
+}
+
+.posicion input{
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: #acacac solid 2px;
+    background-color: transparent;
+    color: #023C40;
+    transition: 0.15s all ease;
+}
+
+.posicion input:focus {
+    border-color: #eee;
+}
+
+.posicion input::placeholder{
+    color: transparent;
+}
+
+.posicion .labell{
+    position: absolute;
+    top: 9px;
+    left: 0;
+    font-size: 18px;
+    padding: 0 10px;
+    color: #acacac;
+    pointer-events: none;
+    transition: 0.15s all aese;
+}
+
+.posicion input:focus + .labell,
+.posicion input:not(:placeholder-shown) + 
+.labell{
+    transform: translate(5px, -22px);
+    background-color: #023C40;
+    font-size: 14px;
+    color: #eee;
+}
+
+.container2{
+    display: flex;
+    align-items: center;
+}
+
+.horizontal-container {
+    justify-content: center;
+    gap: 20px; /* Espacio entre los campos */
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn-ingresar{
+    height: 50px;
+    width: 100px;
+    border-radius: 20%;
+}
+
+
+/*margen par btn registrar o ingresar*/
+.mar{
+    margin-bottom: 5rem;
+}
+
+/* btn de ingresar y registrar*/
+.btn2:hover{text-decoration: none;
+    background: #023C40;
+    color: white;
+    border: 1px solid white;
+
+}
+
+.tam_letra{
+    font-size: 1.2rem;
+}

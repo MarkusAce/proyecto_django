@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="row
+    horizontal-container" >
+        <div>
+            <h1>
+                MEGA GAMES
+            </h1>
+            <hr>
+            <br>
+            <h2>Iniciar Sesión</h2>
+            <div class="row horizontal-container">
+                <img src="{{ MEDIA_URL}}pagina/perfil.png" alt="perfil" class="tam-perfil1">
+            </div>
+        </div>  
+        <div class="container2 horizontal-container row col-lg-4 col-xs-5 col-sm-6 col-md-6 col-xl-5 col-xxl-4">  
+            <form method="post" id="loginForm">
+                <label id="condicion" class="labell tam_letra"></label>
+                <br>
+                <br>
+                {% csrf_token %}
+                <div class="posicion row">
+                    <input type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" class="form-control" placeholder="Correo" required value="{{ form.email.value|default_if_none:'' }} ">
+                    <label class="labell" for="loginUsername">Correo</label>
+                    <label class="posicion" id="confir_email" type="text"></label>
+                    {{ form.email.errors }}
+                </div>
+                <br>
+                <div class="posicion row">
+                    
+                    <input type="password" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}" class="form-control" placeholder="Correo" required>
+                    <label class="labell" for="loginPassword">Contraseña</label>
+                    <label class="posicion" id="confir_pass" type="text"></label>
+                    {{ form.password.errors }}
+                </div>
+                <button type="submit" class="btn-ingresar mar btn2">ingresar</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
