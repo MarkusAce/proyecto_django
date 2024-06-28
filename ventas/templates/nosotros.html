@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+
+    <div>
+        <div>
+            <div class="container-fluid">
+                <div class="row col-11 mx-auto ">
+                    <h1 class="centrar_titulo mt-3 tam-titulo">
+                        <img src="{{ MEDIA_URL }}pagina/logoo.png" alt="Logo" class="logo">Mega Games
+                    </h1>
+                    <img src="{{ MEDIA_URL}}pagina/mega_logo.jpeg" alt="" class="mx-auto tamaño_foto_nosotros">
+                </div>
+            </div>
+            <hr class="centrar_titulo">
+        </div>
+
+        <main>
+            <section class="row mt-4 mx-auto col-lg-9 col-10 relleno borde1">
+                <div >
+                    <p class="centrar-titulo2">En Mega Games, nos apasiona llevar la emoción y la diversión del mundo de los videojuegos directamente 
+                        a tu pantalla. nosotros nos dedicamos a ofrecer a nuestros clientes la mejor experiencia de a la hora de comprar los productos
+                          mas les apasiona a nuestros clientes. Desde nuestro inicio, nos hemos comprometido a proporcionar una amplia gama de 
+                        títulos de alta calidad, desde los clásicos más queridos hasta los lanzamientos más recientes y emocionantes. 
+                        Nuestra plataforma en línea ofrece una selección diversa de juegos para todas las edades y preferencias, garantizando
+                        que haya algo para todos los jugadores. Lo que nos distingue en Mega Games es nuestra dedicación a la excelencia en 
+                        cada aspecto de nuestro servicio. Nuestro equipo está formado por apasionados de los videojuegos que comparten un objetivo
+                        común; brindar una experiencia de juego excepcional a nuestros clientes. Desde la facilidad de navegación de nuestra 
+                        plataforma hasta el soporte al cliente de primera clase, nos esforzamos por superar las expectativas en cada interacción.
+                        Además de ofrecer una amplia selección de juegos, nos comprometemos a mantenernos al tanto de las últimas tendencias y 
+                        desarrollos en la industria de los videojuegos. Trabajamos en estrecha colaboración con los principales desarrolladores
+                        y editores para asegurarnos de que nuestros clientes tengan acceso anticipado a los lanzamientos más esperados y exclusivos. </p>
+                        
+                </div>
+        
+            </section>
+            
+            
+        
+            <section class="row mt-4">
+                <div>
+                    <h2 class="mt-3 centrar_titulo tam-titulo2">Preguntas Frecuentes</h2>
+                    <hr class="centrar_titulo">
+                </div>
+                <div>
+        
+                    <!--Pregunta 1-->
+                    <h3 class="centrar_titulo">¿Cuánto se demora en llegar mi pedido?</h3>
+                    <div class="mx-auto col-lg-9 col-10 relleno borde1"><!--col-lg-10 El tamaño y mx-auto me centro todo-->
+                        <p>El tiempo de entrega depende de tu ubicación y del método de envío seleccionado. Por lo general, los pedidos dentro del país suelen entregarse en un plazo de 3 a 7 días hábiles, mientras que los internacionales pueden tardar de 7 a 14 días hábiles.</p>        
+                    </div>
+        
+        
+                    <!--Pregunta 2-->
+                    <h3 class="centrar_titulo">¿Cuáles son los métodos de pago?</h3>
+                    <div class="mx-auto col-lg-9 col-10 relleno borde1"><!--col-lg-10 El tamaño y mx-auto me centro todo-->
+                        <p>Aceptamos pagos mediante tarjetas de crédito/débito (Visa, Mastercard, American Express) y otras tarjetas.</p>
+                    </div>
+                    
+                    <!--Pregunta 3-->
+                    <h3 class="centrar_titulo">¿Puedo cancelar o modificar mi pedido después de realizarlo?</h3>
+                    <div class="mx-auto col-lg-9 col-10 relleno borde1"><!--col-lg-10 El tamaño y mx-auto me centro todo-->
+                        <p> Una vez que se realiza un pedido, comienza el proceso de preparación y envío, por lo que no se pueden realizar cambios ni cancelaciones. Sin embargo, puedes devolver los productos según nuestra política de devolución.</p>
+                    </div>
+                    
+                    <!--Pregunta 4-->
+                    <h3 class="centrar_titulo">¿Ofrecen envíos internacionales?</h3>
+                    <div class="mx-auto col-lg-9 col-10 relleno borde1"><!--col-lg-10 El tamaño y mx-auto me centro todo-->
+                        <p>No, no realizamos envíos a nivel internacional. Solo realizamos envios a nivel nacional a todas las regiones de Chile.
+                        </p>
+                    </div>
+        
+                    <!--Pregunta 5-->
+                    <h3 class="centrar_titulo">¿Cuál es la política de devolución?</h3>
+                    <div class="mx-auto col-lg-9 col-10 relleno borde1 mb-4"><!--col-lg-10 El tamaño y mx-auto me centro todo-->
+                        <p>Aceptamos devoluciones dentro de un plazo de 30 días a partir de la fecha de recepción del pedido. Los productos deben estar en su estado original para poder procesar la devolución.</p>
+                    </div>
+        
+                </div>
+            </section>
+        
+            </main>
+    </div>
+
+{% endblock %}

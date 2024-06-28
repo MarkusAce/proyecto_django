@@ -32,6 +32,34 @@ html, body{/*Fondo de pantalla*/
     min-height: 136px;
 }
 
+.tam-foto2{
+    max-width: 650px;
+    max-height: 790px;
+}
+
+.relleno{
+    padding: 0.5rem;
+}
+
+.borde1{
+    border: 1px black solid;
+    border-radius: 20px 0px;
+    background-color: antiquewhite;
+}
+
+.centrar-titulo2{
+    text-align: justify;
+    color: black;
+}
+
+.tam-titulo2{
+    font-size: 3rem;
+}
+
+.texto{
+    font-size: 1.5rem;
+}
+
 .cambiar-texto-footer{
     list-style-type: none;
     padding: 0;
@@ -47,6 +75,19 @@ html, body{/*Fondo de pantalla*/
     color: #AEB7B3;
 }
 
+.tamaño-cuadro{
+    max-width: 60px;
+    height: 40px;
+}
+
+.tamaño-cuadro2{
+    display: flex;
+    width: 30px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
 .color-blanco{
     margin-bottom: 2rem;
     color: white;
@@ -60,6 +101,13 @@ html, body{/*Fondo de pantalla*/
     color: #AEB7B3;
 }
 
+.cuadrado{
+    background-color: #AEB7B3;
+    width: 90%;
+    height: 50%;
+    margin-bottom: 1rem;
+}
+
 .color-distinto-tras{
     color: rgba(217, 217, 217, 0.5);
     margin: 0;
@@ -71,10 +119,13 @@ html, body{/*Fondo de pantalla*/
     justify-content: space-evenly;
     align-items: center;
 }
-.tam-foto2{
-    max-width: 650px;
-    max-height: 790px;
+
+.centrar-texto{
+    text-align: center;
+    color: black;
+    padding: 1rem 0;
 }
+
 .tamaño-card{
     width: 20rem;
 }
@@ -91,6 +142,21 @@ html, body{/*Fondo de pantalla*/
     font-size: 3rem;
 }
 
+.tamaño-fav{
+    width: 50px;
+    height: 50px;
+    margin-left: 5rem;
+}
+
+.cuadro-genero2{
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+}
+
 .tam_foto{ /*Se ocupo para poner del mismo tamaño las mascotas en adopta.html*/
     height: 20rem;
     width: 100%;
@@ -102,12 +168,18 @@ html, body{/*Fondo de pantalla*/
     border-radius: 1rem;
 }
 
+.bordear2{
+    border-radius: .5rem;
+}
 .fondo-carrito{
     background-color: #AEB7B3;
  }
 
 .negrita{
     font-weight: bold;
+}
+.anchar-boton{
+    height: 3.2vh;
 }
 
 .texto-card{
@@ -175,6 +247,17 @@ html, body{/*Fondo de pantalla*/
     .tam-titulo2{
         font-size: 2rem;
     }
+    .texto{
+        font-size: 1rem;
+    }
+    .cuadro-genero2{
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        font-size: .8rem;
+    }
 }
 
 @media screen and (min-width:321px) and (max-width: 575px) {
@@ -221,6 +304,9 @@ html, body{/*Fondo de pantalla*/
     .tam-titulo2{
         font-size: 2rem;
     }
+    .texto{
+        font-size: 1rem;
+    }
     
 }
 
@@ -236,12 +322,18 @@ html, body{/*Fondo de pantalla*/
     .tam-titulo2{
         font-size: 2.5rem;
     }
+    .texto{
+        font-size: 1rem;
+    }
 }
 @media screen and (min-width:768px) and (max-width:991px){
     .borde-derecha{
         border-right: 2px solid #AEB7B3;
         padding-right: 8vw;
         min-height: 136px;
+    }
+    .texto{
+        font-size: 1.1rem;
     }
 }
 

@@ -33,6 +33,14 @@ def lista_videojuegos(request):
     }
     return render(request, 'lista_videojuegos.html', context)
 
+def lista_videojuegos1(request):
+    videojuegos = Videojuego.objects.all()
+    context ={
+        'videojuegos': videojuegos,
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(request, 'listar-juego-cliente.html', context)
+
 def editar_videojuego(request, pk):
     videojuego = get_object_or_404(Videojuego, pk=pk)
 
@@ -60,3 +68,9 @@ def eliminar_videojuego(request, pk):
         videojuego.delete()
         return redirect('lista_videojuegos')
     return render(request, 'confirmar_eliminacion.html',{'videojuego':videojuego})
+
+def nosotros(request):
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(request, 'nosotros.html', context)
