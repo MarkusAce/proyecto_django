@@ -74,3 +74,14 @@ def nosotros(request):
         'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(request, 'nosotros.html', context)
+
+def juego_detalle(request, juego_id):
+    videojuego = get_object_or_404(Videojuego, pk=juego_id)
+    juegos_recomendados = Videojuego.objects.filter(id_consola=videojuego.id_consola).exclude(pk=juego_id).order_by('?')[:2]
+
+    context = {
+        'videojuego': videojuego,
+        'juegos_recomendados': juegos_recomendados,
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(request, 'juego.html', context)
