@@ -119,7 +119,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'pagina/static')
+    # Anade aquí más directorios static si tienes más aplicaciones
+]
 STATIC_URL = 'static/'
 
 # Default primary key field type
@@ -130,3 +133,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+
+# settings.py
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'megagames185@gmail.com'  # Tu dirección de correo
+EMAIL_HOST_PASSWORD = 'gnlcnnkxuajkwnjp'  # Tu contrasea de aplicación
+DEFAULT_FROM_EMAIL = 'megagames185@gmail.com'

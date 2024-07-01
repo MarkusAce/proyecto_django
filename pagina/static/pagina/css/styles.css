@@ -41,6 +41,12 @@ html, body{/*Fondo de pantalla*/
     padding: 0.5rem;
 }
 
+.perfil{
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+}
+
 .borde1{
     border: 1px black solid;
     border-radius: 20px 0px;
@@ -203,6 +209,29 @@ html, body{/*Fondo de pantalla*/
 .centrar_titulo{/*Centrar titulo Mega Games*/
     text-align: center;
     color: #AEB7B3;
+}
+.btn-ingresar{
+    height: 50px;
+    width: 100px;
+    border-radius: 20%;
+}
+.horizontal-container {
+    justify-content: center;
+    gap: 20px; /* Espacio entre los campos */
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.btn2:hover{text-decoration: none;
+    background: #023C40;
+    color: white;
+    border: 1px solid white;
+
+}
+.mar{
+    margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 320px) {

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+        <h2 class="color-blanco2 mt-2 text-center">Resultados de la búsqueda para "{{ query }}"</h2>
+        <div class="container-fluid">
+            <div class="row">
+                {% for juego in juegos %}
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-2 mb-4 mx-auto text-center">
+                        <a href="{% url 'juego_detalle' juego.pk %}" class="card bordear tamaño-card mx-auto text-decoration-none">
+                            <div class="card bordear tamaño-card mx-auto">
+                                <img src="{{ juego.image.url }}" class="card-img-top bordear tam_foto" alt="{{ juego.nom_juego }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ juego.nom_juego }}</h5>
+                                    <p class="card-text negrita">{{ juego.id_consola.nombre }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% empty %}
+                    <p class="color-blanco2 text-center">No se encontraron juegos que coincidan con la búsqueda.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+{% endblock %}

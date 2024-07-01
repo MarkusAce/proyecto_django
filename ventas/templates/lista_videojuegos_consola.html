@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div>
+        <div class="container-fluid">
+            <div class="row col-11 mx-auto ">
+                <h1 class="centrar_titulo mt-3 tam-titulo">
+                <img src="{{ MEDIA_URL }}pagina/logoo.png" alt="Logo" class="logo">Mega Games</h1>
+                <h2 class="mt-3 centrar_titulo tam-titulo2">Revisa Nuestro Catalogo!</h2>
+            </div>
+        </div>
+        <hr class="centrar_titulo">
+    </div>
+
+    <div class="container-fluid mb-4 mt-4 text-center mx-auto">
+        <div class="row">
+            <a href="{% url 'lista_videojuegos' %}" class="btn btn-light col-10 col-xl-2 col-lg-2 col-md-2 col-sm-10 col-xs-10 mx-auto mb-2 bordear2 negrita anchar-boton">Todos</a>
+            <a href="{% url 'lista_videojuegos_consola' 'Ps5' %}" class="btn btn-light col-10 col-xl-2 col-lg-2 col-md-2 col-sm-10 col-xs-10 mx-auto mb-2 bordear2 negrita anchar-boton">PS5</a>
+            <a href="{% url 'lista_videojuegos_consola' 'Nintendo Switch' %}" class="btn btn-light col-10 col-xl-2 col-lg-2 col-md-2 col-sm-10 col-xs-10 mx-auto mb-2 bordear2 negrita anchar-boton">Switch</a>
+            <a href="{% url 'lista_videojuegos_consola' 'Ps4' %}" class="btn btn-light col-10 col-xl-2 col-lg-2 col-md-2 col-sm-10 col-xs-10 mx-auto mb-2 bordear2 negrita anchar-boton">PS4</a>
+            <a href="{% url 'lista_videojuegos_consola' 'Xbox' %}" class="btn btn-light col-10 col-xl-2 col-lg-2 col-md-2 col-sm-10 col-xs-10 mx-auto mb-2 bordear2 negrita anchar-boton">Xbox</a>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            {% for videojuego in videojuegos %}
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-2 mb-4 mx-auto text-center">
+                    <a href="{% url 'juego_detalle' videojuego.pk %}" class="text-decoration-none">
+                        <div class="card bordear tamaño-card mx-auto">
+                            <img src="{{ videojuego.image.url }}" class="card-img-top bordear tam_foto" alt="{{ videojuego.nom_juego }}">
+                            <div class="card-body">
+                                <p class="card-text texto-card">{{ videojuego.nom_juego }}</p>
+                                <p class="card-text texto-card">{{ videojuego.id_consola.nombre }}</p>
+                                <div class="mt-2">
+                                    <a href="{% url 'editar_videojuego' videojuego.pk %}" class="btn btn-primary">Editar</a>
+                                    <a href="{% url 'eliminar_videojuego' videojuego.pk %}" class="btn btn-danger">Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

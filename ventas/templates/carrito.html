@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="container-fluid mx-auto">
+    <div class="row">
+        <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6 col-xl-6 py-0 px-0 fondo-carrito mx-2 mt-2 bordear2">
+            <h4 class="text-center mt-1">Carrito de Compra</h4>
+            <hr>
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-5 col-md-5 col-lg-4 text-center negrita">Tus Productos</div>
+                    <div class="col-3 col-md-4 col-lg-4 text-center negrita">Cantidad</div>
+                    <div class="col-4 col-md-3 col-lg-4 text-center negrita">Precio</div>
+                </div>
+            </div>
+            <hr>
+            <div id="totalJuegosRow" class="row mx-1 mb-2">
+                {% for item in elementos_carrito %}
+                <div class="row d-flex">
+                    <div class="col-5 col-md-5 col-lg-4 text-center">{{ item.videojuego.nom_juego }}</div>
+                    <div class="col-3 col-md-4 col-lg-4 text-center">{{ item.cantidad }}</div>
+                    <div class="col-4 col-md-3 col-lg-4 text-center">${{ item.precio }}</div>
+                </div>
+                <hr>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-12 col-md-5 col-lg-5 col-xl-5 py-0 px-0 fondo-carrito fondo-altura mx-2 mt-2 bordear2">
+            <h4 class="text-center mt-1">Total</h4>
+            <hr>
+            <div class="row">
+                <label class="col-7 mx-auto negrita" for="Total">Subtotal:</label>
+                <p id="subTotalCarritoPage" class="col-3 mx-auto negrita mb-2">${{ subtotal }}</p>
+                <label class="col-7 mx-auto negrita" for="Total">IVA:</label>
+                <p id="ivaTotalCarritoPage" class="col-3 mx-auto negrita mb-2">${{ iva }}</p>
+                <hr>
+                <label class="col-7 mx-auto negrita" for="Total">Total:</label>
+                <p id="totalCarritoPage" class="col-3 mx-auto negrita mb-2">${{ total_precio }}</p>
+                <div class="text-center"><button id="pagarBtn" class="bordear2 mt-4 negrita boton-grande mb-2">Pagar</button></div>
+            </div>
+            
+        </div>
+    </div>
+</main>
+
+{% endblock %}

@@ -1,7 +1,5 @@
 {% load static %}
 
-<!DOCTYPE html>
-<html>
 <body>
     {% block content %}
 
@@ -14,10 +12,10 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         <li class="nav-item separar_items">
-                            <a class="nav-link active tam-fuente" aria-current="page" href="{% url 'lista_inicio' %}">Inicio</a>
+                            <a class="nav-link tam-fuente" aria-current="page" href="{% url 'ingresar' %}">Inicio</a>
                         </li>
                         <li class="nav-item separar_items">
-                            <a class="nav-link tam-fuente" aria-current="page" href="./Nosotros.html">Nosotros</a>
+                            <a class="nav-link tam-fuente" aria-current="page" href="{% url 'nosotros' %}">Nosotros</a>
                         </li>
                         <li class="nav-item separar_items">
                             <a class="nav-link tam-fuente" href="{% url 'lista_videojuegos' %}">Juegos</a>
@@ -28,24 +26,22 @@
                         </li>
 
                         <li class="nav-item separar_items">
-                            <a class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="./carrito.html">Carrito</a>
+                            <a class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="{% url 'ver_carrito' %}">Carrito</a>
                         </li>
                     </ul>
                 </div>
                 
-                <form class="d-flex flex-nowrap my-2 -my-lg-0">
+                <form action="{% url 'buscar_juegos' %}" method="get" class="d-flex flex-nowrap my-2 -my-lg-0">
                     <div class="input-group"> 
-                        <input id="buscarJuegoPage" class="form-control mr-sm-2 controlar-forma" type="search" placeholder="Buscar" aria-label="Search">
-                        <button id="botonBuscarPage" class="btn btn-outline-success" type="button">🔎</button>
-                        <a class="quitar-link" href="./carrito.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">🛒</button></a>
-                        <button id="btnIniciar" class="btn btn-outline-success d-none d-sm-block" type="button">👤</button>
+                        <input name="q" id="buscarJuegoPage" class="form-control mr-sm-2 controlar-forma" type="search" placeholder="Buscar" aria-label="Search">
+                        <button id="botonBuscarPage" class="btn btn-outline-success" type="submit">🔎</button>
+                        <a class="quitar-link" href="{% url 'ver_carrito' %}"><button class="btn btn-outline-success d-none d-sm-block" type="button">🛒</button></a>
+                        <a class="quitar-link" href="{% url 'registrar' %}"><button class="btn btn-outline-success d-none d-sm-block" type="button">👤</button></a>
                     </div>
                 </form>
-                
             </div>
         </nav>
     </header>
 
     {% endblock %}
-
 </body>
